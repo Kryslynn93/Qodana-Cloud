@@ -46,4 +46,6 @@ jobs:
         with:
           message: "ci: Add AppMap language agent and appmap.yml"
       # End AppMap CI language agent installation
+      - name: Run tests
+        run: ./gradlew appmap test
       - run: echo "🍏 This job's status is ${{ job.status }}."
